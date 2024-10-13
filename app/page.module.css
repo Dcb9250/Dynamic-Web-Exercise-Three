@@ -15,3 +15,7 @@
 .header nav ul li {
 	list-style-type: none;
 }
+
+.weatherCardWrapper {
+	font-size: small;
+}
