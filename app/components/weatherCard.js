@@ -1,4 +1,5 @@
-import WeatherIcon from "./WeatherIcon"
+import WeatherIcon from "./WeatherIcon";
+import styles from "../page.module.css";
 
 export default function WeatherCard({
 	city,
@@ -12,18 +13,29 @@ export default function WeatherCard({
 }) {
 	console.log({ cloudiness });
 	const cloudinessPercentage = 99 - cloudiness;
-	const background = `linear-gradient(90deg, white, ${cloudinessPercentage}%, grey)`;
+	const background = `radial-gradient(lightblue, ${cloudinessPercentage}%, grey)`;
 	return (
 		<div style={{ background }}>
-			<h2>{city}</h2>
-			<p>Current Temperature: {currentTemp}</p>
-			<p>High Temperature: {highTemp}</p>
-			<p>Low Temperature: {lowTemp}</p>
-			<p>Cloudiness: {cloudiness}</p>
-			<p>Humidity: {humidity}</p>
-			<p>Wind Speed: {windSpeed}</p>
-			weatherType = {weatherType}
-            <WeatherIcon weatherType= {weatherType}/>
+			<div className={styles.main}>
+				<div className={styles.card}>
+					<div className={styles.bigInfo}>
+						<h2>{city}</h2>
+						<p>{currentTemp} F</p>
+					</div>
+
+					<div className={styles.weatherIcon}>
+						<WeatherIcon weatherType={weatherType} />
+					</div>
+					<div className={styles.stats}>
+						<div>High Temperature: {highTemp}</div>
+						<div>Low Temperature: {lowTemp}</div>
+						<div>Cloudiness: {cloudiness}</div>
+						<div>Humidity: {humidity}</div>
+						<div>Wind Speed: {windSpeed}</div>
+						<div>WeatherType = {weatherType}</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 }

@@ -5,17 +5,67 @@
 	grid-row-start: 2;
 }
 
+.bigInfo {
+	padding-top: 5%;
+	padding-left: 5%;
+	font-size: 50pt;
+	font-family: monospace;
+}
+
+.bigInfo h2 {
+	font-size: 72pt;
+}
+
+.card {
+	border: 1px black solid;
+	margin: 5%;
+}
+
 .header {
-	align-items: stretch;
-	background-color: darkorchid;
-	display: flex;
+	background-color: rgb(191, 179, 200);
 	padding: 15px;
+	gap: 40px;
+	margin: 0 auto;
+}
+
+.header h1 {
+	display: flex;
+	font-family: monospace;
+	justify-content: flex-start;
+}
+
+.header nav ul {
+	display: flex;
+	font-family: monospace;
+	gap: 40px;
+	justify-content: flex-end;
+	margin: 0 auto;
 }
 
 .header nav ul li {
 	list-style-type: none;
 }
 
+.stats {
+	align-items: flex-end;
+	display: flex;
+	flex-direction: column;
+	font-family: monospace;
+	font-size: xx-large;
+	margin-top: -10%;
+	padding: 5%;
+	text-align: left;
+}
+
 .weatherCardWrapper {
 	font-size: small;
+}
+
+.weatherIcon {
+	align-items: center;
+	display: flex;
+	margin-top: -100px;
+	padding: 0%;
+	scale: 20%;
+	max-height: 250px;
 }
